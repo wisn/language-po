@@ -7,13 +7,13 @@ github: "wisn/po-hs"
 license: MIT
 author: "Wisnu Adi Nurcahyo"
 maintainer: "Wisnu Adi Nurcahyo"
-# synopsis: A new Haskeleton package.
-# description: po-hs is a new Haskeleton package.
-# category: Other
+synopsis: A Format-Preserving Portable Object in Haskell.
+description: A Format-Preserving Portable Object in Haskell.
+category: Text
 
 extra-source-files:
 - CHANGELOG.md
-- LICENSE.md
+- LICENSE
 - package.yaml
 - README.md
 - stack.yaml
