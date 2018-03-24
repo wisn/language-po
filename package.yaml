@@ -9,7 +9,7 @@ author: "Wisnu Adi Nurcahyo"
 maintainer: "Wisnu Adi Nurcahyo"
 synopsis: A Format-Preserving Portable Object in Haskell.
 description: A Format-Preserving Portable Object in Haskell.
-category: Text
+category: Data
 
 extra-source-files:
 - CHANGELOG.md

@@ -1,4 +1,4 @@
-module Text.Po.Manipulator
+module Data.Po.Manipulator
   ( addEOF
   , addEOL
   , addExtractedComment
@@ -9,7 +9,8 @@ module Text.Po.Manipulator
   , initYAML
   ) where
 
-import Text.Po.Token
+import Data.Po.Token
+import Data.Text (Text)
 
 initYAML :: Tokens
 initYAML = [BOF]
@@ -20,16 +21,16 @@ addEOF po = po ++ [EOF]
 addEOL :: Tokens -> Tokens
 addEOL po = po ++ [EOL]
 
-addExtractedComment :: Tokens -> String -> Tokens
+addExtractedComment :: Tokens -> Text -> Tokens
 addExtractedComment po co = po ++ [ExtractedComment {comment = co}]
 
-addFlag :: Tokens -> String -> Tokens
+addFlag :: Tokens -> Text -> Tokens
 addFlag po fl = po ++ [Flag { flag = fl}]
 
-addReference :: Tokens -> String -> Tokens
+addReference :: Tokens -> Text -> Tokens
 addReference po ref = po ++ [Reference {reference = ref}]
 
-addTranslatorComment :: Tokens -> String -> Tokens
+addTranslatorComment :: Tokens -> Text -> Tokens
 addTranslatorComment po co = po ++ [TranslatorComment {comment = co}]
 
 addWhiteSpace :: Tokens -> Int -> Tokens

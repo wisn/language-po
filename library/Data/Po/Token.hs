@@ -1,15 +1,17 @@
-module Text.Po.Token
+module Data.Po.Token
   ( Token (..)
   , Tokens
   ) where
 
+import Data.Text (Text)
+
 data Token = BOF
            | EOF
            | EOL
-           | ExtractedComment {comment :: String}
-           | Flag {flag :: String}
-           | Reference {reference :: String}
-           | TranslatorComment {comment :: String}
+           | ExtractedComment {comment :: Text}
+           | Flag {flag :: Text}
+           | Reference {reference :: Text}
+           | TranslatorComment {comment :: Text}
            | WhiteSpace {long :: Int}
            deriving (Eq, Ord)
 
