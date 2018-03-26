@@ -1,4 +1,4 @@
-module Data.Po.Token
+module Language.Po.Token
   ( Token (..)
   , Tokens
   ) where

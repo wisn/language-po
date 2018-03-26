@@ -6,7 +6,7 @@
 -- main :: IO ()
 -- main = Example.main
 
-import Data.Po
+import Language.Po
 
 main :: IO ()
 main = do

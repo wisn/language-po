@@ -1,15 +1,15 @@
 # This YAML file describes your package. Stack will automatically generate a
 # Cabal file when you run `stack build`. See the hpack website for help with
 # this file: <https://github.com/sol/hpack>.
-name: po-hs
+name: language-po
 version: '0.0.1'
-github: "wisn/po-hs"
+github: "wisn/language-po"
 license: MIT
 author: "Wisnu Adi Nurcahyo"
 maintainer: "Wisnu Adi Nurcahyo"
 synopsis: A Format-Preserving Portable Object in Haskell.
 description: A Format-Preserving Portable Object in Haskell.
-category: Data
+category: Language
 
 extra-source-files:
 - CHANGELOG.md
@@ -23,27 +23,28 @@ ghc-options: -Wall
 library:
   dependencies:
   - base
+  - text
   source-dirs: library
 
 executables:
-  po-hs:
+  poparser:
     source-dirs: executable
     main: Main.hs
     dependencies:
     - base
-    - po-hs
+    - language-po
     ghc-options:
     - -rtsopts
     - -threaded
     - -with-rtsopts=-N
 
 benchmarks:
-  po-hs-benchmarks:
+  poparser-benchmarks:
     source-dirs: benchmark
     main: Main.hs
     dependencies:
     - base
-    - po-hs
+    - language-po
     - criterion
     ghc-options:
     - -rtsopts
@@ -51,12 +52,12 @@ benchmarks:
     - -with-rtsopts=-N
 
 tests:
-  po-hs-test-suite:
+  poparser-test-suite:
     source-dirs: test-suite
     main: Main.hs
     dependencies:
     - base
-    - po-hs
+    - language-po
     - tasty
     - tasty-hspec
     ghc-options:

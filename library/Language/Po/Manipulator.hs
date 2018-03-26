@@ -1,4 +1,4 @@
-module Data.Po.Manipulator
+module Language.Po.Manipulator
   ( addEOF
   , addEOL
   , addExtractedComment
@@ -9,8 +9,8 @@ module Data.Po.Manipulator
   , initYAML
   ) where
 
-import Data.Po.Token
 import Data.Text (Text)
+import Language.Po.Token
 
 initYAML :: Tokens
 initYAML = [BOF]
